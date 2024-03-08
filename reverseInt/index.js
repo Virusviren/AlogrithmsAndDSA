@@ -7,7 +7,29 @@
 //   reverseInt(-13) === -31
 //   reverseInt(-100) === -1
 
-function reverseInt(n) {}
+function reverseInt(n) {
+  return parseInt(n.toString().split("").reverse().join("")) * Math.sign(n);
+
+
+  // let reversedInt = n.toString().split("")
+  // console.log(reversedInt[0] === "-")
+  // if (reversedInt[0] == "-") {
+  //   reversedInt = reversedInt.slice(1).reverse().join("")
+  //   console.log(reversedInt)
+  //   return parseInt(`-${reversedInt}`)
+
+  // }
+  // else {
+  //   reversedInt = reversedInt.reverse().join("")
+  //   console.log(reversedInt)
+  //   return parseInt(reversedInt)
+  // }
+
+
+
+
+
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
@@ -38,7 +60,7 @@ const { assert } = chai;
 describe("Integer Reversal", () => {
   it("reverseInt() works on positive numbers", () => {
     assert.equal(reverseInt(3), 3);
-    assert.equal(reverseInt(13), 31);
+    assert.equal(reverseInt(-13), -31);
     assert.equal(reverseInt(100), 1);
     assert.equal(reverseInt(1408), 8041);
   });
