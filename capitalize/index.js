@@ -5,7 +5,39 @@
 //   capitalize("I'm a little tea pot") --> 'I'm A Little Tea Pot'
 //   capitalize('sHoRt AnD sToUt') --> 'Short And Stout'
 
-function capitalize(str) {}
+function capitalize(str) {
+
+  let modifiedArray = str.toLowerCase().split("")
+  let nextUpper = true
+  for (let i = 0; i < modifiedArray.length; i++) {
+
+    if (nextUpper && modifiedArray[i] !== " ") {
+      modifiedArray[i] = modifiedArray[i].toUpperCase()
+      nextUpper = false
+    }
+    else if (modifiedArray[i] === " ") {
+      nextUpper = true
+    }
+
+
+
+  }
+
+
+  return modifiedArray.join("")
+
+
+}
+
+// function capitalize(str) {
+//   const arrOfWords = str.split(" ");
+//   const arrOfWordsCased = [];
+//   for (let i = 0; i < arrOfWords.length; i++) {
+//     const word = arrOfWords[i];
+//     arrOfWordsCased.push(word[0].toUpperCase() + word.slice(1).toLowerCase());
+//   }
+//   return arrOfWordsCased.join(" "), I
+// }
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
